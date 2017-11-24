@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container"> 
+        <h6 class="center"><i> This is a game project where I have been practiced Ajax requests and three libraries: 
+                <a href="https://jquery.com/">jQuery</a>,
+                <a href="http://selectize.github.io/selectize.js/">Selectize.css</a> and 
+                <a href="http://materializecss.com/">Materialize.css.</a> 
+                <p>For more details access my GitHub profile on github.com/renanmig</p></h6></i>
+
+        <h1 class="center"> Typing Game </h1>
+        <h5 class="center description">How fast can you type? The purpose of this game is to type what is written below as fast and correct as possible, when typed wrong the border will turn red and when right turns green. For each sentence has a definite time, after finishing the number of characters and words achieved will be recorded on the scoreboard. </h4>
+        
+            <div class="botoes">
+                    <nav class="center game">
+                        <div class="nav-wrapper"> 
+                            <a href="#" class="brand-logo right" id="botao-sync">Synchronize</a>
+                            <ul id="nav-mobile" class="left hide-on-med-and-down">    
+                                <li><a id="botao-reiniciar"> Restart</a></li>
+                                <li><a id="botao-placar">Scoreboard</a></li>
+                                <li><a id="botao-frase">Random Sentence</a></li>
+                                <li></li><a id="botao-frase-id">Select a sentence / user -></a></li>
+                                <input type="number" id="frase-id" min="0">
+                                <div class="select-usuarios">
+                                    <select id="usuarios">
+                                        <option value="Renan">Renan</option>
+                                    </select>
+                                    
+                                </div>    
+                            </ul>
+                        
+                        </div>
+                    </nav>
+
+
+        <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+        <div class="center">
+            <img src="img/spinner.gif" alt="Spinner" id="spinner">
+            <p id="erro">Something wrong happened, please try again.</p>
+        </div>
+
+        <ul class="informacoes center">
+        <li>
+            <i class="small material-icons icones">description</i>
+            <span id="tamanho-frase"> </span> words </li>
+        <li>
+            <i class="small material-icons icones">query_builder</i>
+            <span id="tempo-digitacao"> 35 </span> seconds </li>
+        </ul>
+  
+        <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
+        
+        
+    
+
+        <ul class="center">
+            <li><span id="contador-caracteres"> </span> characters typed</li>
+            <li><span id="contador-palavras"> </span> words written </li>
+        </ul>
+
+        <section class="placar">
+            <h3 class="center">Scoreboard</h3>
+            <table class="centered bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Namber of words</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Renan</td>
+                        <td>1000</td>
+                        <td>
+                            <a href="#" class="botao-remover">
+                                <i class="small material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="js/jquery.js"></script> 
+    <script src="js/main.js"></script> 
+    <script src="js/frase.js"></script> 
+    <script src="js/selectize.js"></script> 
+
+</body>
+</html>
